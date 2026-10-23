@@ -1,6 +1,8 @@
 # Samsung Supply Chain Analytics
 
-A six-page Power BI report that follows a product from procurement to customer, using a star-schema model built from supply chain, inventory, production, shipment, and sales data.
+A Power BI supply chain and logistics report for a consumer electronics business, built on a star-schema model that connects procurement, production, inventory, shipment, and sales data.
+
+![Samsung Supply Chain Analytics dashboard](assets/dashboard.png)
 
 ## Overview
 
@@ -14,13 +16,10 @@ A six-page Power BI report that follows a product from procurement to customer, 
 ## Report pages
 
 - **Home** - navigation hub with page cards.
-- **Overview** - revenue, shipment volume, delivered quantity, and average unit cost, with growth and comparison charts.
-- **Supplier** - average lead time and unit cost by supplier, plus supplier-level comparisons.
-- **Inventory** - current stock against safety stock and reorder point, inventory value, days of inventory, and defect rate by product.
-- **Shipment** - shipment volume and cost, delivery status (in transit, delayed, processing), and delay reasons.
-- **Customer** - revenue by platform and channel (retailer and direct), and discount by product.
+- **Customer** - the developed analysis page: gross revenue, total revenue, profit, profit margin, perfect order rate, revenue and profit by customer, monthly revenue with growth, discount against units sold by category, discount by product, and revenue by channel.
+- **Overview**, **Supplier**, **Inventory**, **Shipment** - supporting pages wired to the same model, with supplier lead-time, defect-rate, and carrier-delay views. These pages are structured but not yet fully populated; extending them is the next stage of the build.
 
-Each analytical page uses KPI cards, bar/column/line charts, donut charts, and a shared advanced slicer, with a page navigator for consistent movement through the report.
+The Customer page combines KPI cards, a stacked column and line chart, a scatter, bar charts, a donut, an advanced slicer, and a page navigator for consistent movement through the report.
 
 ## Data model
 
@@ -45,6 +44,8 @@ The raw CSV files are included in `data/` so the model can be rebuilt or extende
 ```text
 samsung-supply-chain-analytics/
 |-- Samsung_Supply_Chain_Analytics.pbix
+|-- assets/
+|   `-- dashboard.png
 |-- data/
 |   |-- dim_customer.csv
 |   |-- dim_date.csv
