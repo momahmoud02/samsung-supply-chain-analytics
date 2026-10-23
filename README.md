@@ -67,7 +67,7 @@ samsung-supply-chain-analytics/
 
 ## Data notes
 
-- The dataset is a sample supply chain model used for analytics practice. Company and customer names are illustrative.
+- The dataset is a representative supply chain model; company and customer names are illustrative.
 - This project is not affiliated with or endorsed by Samsung.
 
 ## Author
